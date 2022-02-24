@@ -154,7 +154,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AbsDiff.cpp" />
+    <ClCompile Include="CelsiusToFahrenheit.cpp" />
+    <ClCompile Include="GuessNumber.cpp" />
+    <ClCompile Include="Palindrome.cpp" />
     <ClCompile Include="SmallAssignments.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AbsDiff.h" />
+    <ClInclude Include="CelsiusToFahrenheit.h" />
+    <ClInclude Include="GuessNumber.h" />
+    <ClInclude Include="Palindrome.h" />
+    <ClInclude Include="SmallAssignments.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

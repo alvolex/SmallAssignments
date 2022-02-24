@@ -3,5 +3,5 @@
 class GuessNumber
 {
 public:
-    
+    static void StartGuess();
 };

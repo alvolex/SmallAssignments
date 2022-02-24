@@ -1,7 +1,7 @@
 ﻿#pragma once
 
-class CelsiusToFahrenheit
+class SmallAssignments
 {
 public:
-    static void ConvertToFahrenheit(float i);
+    int TakeUserInput();
 };
