@@ -156,15 +156,21 @@
   <ItemGroup>
     <ClCompile Include="AbsDiff.cpp" />
     <ClCompile Include="CelsiusToFahrenheit.cpp" />
+    <ClCompile Include="EvenOrOdd.cpp" />
     <ClCompile Include="GuessNumber.cpp" />
+    <ClCompile Include="MinMaxSumAvg.cpp" />
     <ClCompile Include="Palindrome.cpp" />
+    <ClCompile Include="PrintLastNumber.cpp" />
     <ClCompile Include="SmallAssignments.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbsDiff.h" />
     <ClInclude Include="CelsiusToFahrenheit.h" />
+    <ClInclude Include="EvenOrOdd.h" />
     <ClInclude Include="GuessNumber.h" />
+    <ClInclude Include="MinMaxSumAvg.h" />
     <ClInclude Include="Palindrome.h" />
+    <ClInclude Include="PrintLastNumber.h" />
     <ClInclude Include="SmallAssignments.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

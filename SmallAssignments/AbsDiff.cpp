@@ -5,10 +5,12 @@
 
 void AbsDiff::CheckAbsDiff(int i, int x)
 {
-    if (i < 0) i *= -1;    
-    if (x < 0) x *= -1;
+    auto AbsDiff = i-x;
 
-    auto AbsDiff = i+x;
+    if (AbsDiff < 0)
+    {
+        AbsDiff *= -1;
+    }
     
     std::cout << "The absolute difference is: " << AbsDiff << std::endl;
 }

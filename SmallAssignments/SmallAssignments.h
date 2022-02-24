@@ -1,7 +1,9 @@
 ﻿#pragma once
 
-class SmallAssignments
+void MainMenuMessage();
+
+/*class SmallAssignments
 {
 public:
-    int TakeUserInput();
-};
+    
+};*/
