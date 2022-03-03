@@ -2,6 +2,8 @@
 
 #include "SmallAssignments.h"
 
+#include <functional>
+
 #include "AbsDiff.h"
 #include "CelsiusToFahrenheit.h"
 #include "EvenOrOdd.h"
@@ -9,11 +11,14 @@
 #include "MinMaxSumAvg.h"
 #include "Palindrome.h"
 #include "PrintLastNumber.h"
+#include "StuffFromLectures.h"
 
 int main(int argc, char* argv[])
 {
     int Input;
     bool ShouldKeepGoing = true;
+
+    //StuffFromLectures::Mainish();    
     
     while (ShouldKeepGoing)
     {

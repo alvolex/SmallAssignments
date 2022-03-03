@@ -2,16 +2,16 @@
 
 #include <iostream>
 
-
 void MinMaxSumAvg::CalculateValues(std::string str)
 {
     std::string numAsString = "";
 
     int arrIndex = 0;
     int intArray[10];
+    bool NonStringInput = false;
 
     //Evaluate string
-    for (int i = 0; i < str.length(); ++i)
+    for (int i = 0; i < str.length(); i++)
     {
         if (arrIndex >= 10)
         {
@@ -21,21 +21,35 @@ void MinMaxSumAvg::CalculateValues(std::string str)
         
         if (!(str.at(i) == ','))
         {
-            numAsString += str.at(i);
+            bool isNum = false;                   
+            
+            try
+            {
+                std::string tmpstr = "";
+                tmpstr += str.at(i);
+                auto tmp = std::stoi(tmpstr);
+                isNum = true;
+            }
+            catch (...)
+            {
+                NonStringInput = true;
+            }
+
+            if (isNum)
+            {
+                numAsString += str.at(i);
+            }
+            
         }
         else
         {
-            intArray[arrIndex] = stoi(numAsString);
-            numAsString = "";
-            arrIndex++;
+            TryAddIntToArray(numAsString, arrIndex, intArray, NonStringInput); 
         }
-    }
+    }    
     
-    if (arrIndex < 10 && !numAsString.find(','))
+    if (arrIndex < 10)
     {
-        intArray[arrIndex] = stoi(numAsString);
-        numAsString = "";
-        arrIndex++; 
+        TryAddIntToArray(numAsString, arrIndex, intArray, NonStringInput); 
     }   
 
     //Calculate values
@@ -45,9 +59,8 @@ void MinMaxSumAvg::CalculateValues(std::string str)
     float avg = 0;
     
     for (int i = 0; i < arrIndex; ++i)
-    {  
-        
-        std::cout << intArray[i] << std::endl;
+    {          
+        //std::cout << intArray[i] << std::endl;
         sum += intArray[i];
 
         if (intArray[i] < min)
@@ -62,5 +75,22 @@ void MinMaxSumAvg::CalculateValues(std::string str)
     }
 
     avg = static_cast<float>(sum) / static_cast<float>(arrIndex);
-    printf("Sum: %i | Min: %i | Max: %i | Avg: %.2f", sum, min ,max, avg);    
+    std::cout << "\n==============================";
+    printf("\nSum: %i | Min: %i | Max: %i | Avg: %.2f | Input contained non-integers: %s\n", sum, min ,max, avg, NonStringInput ? "yes" : "no");
+    std::cout << "==============================";
+}
+
+
+void MinMaxSumAvg::TryAddIntToArray(std::string& numAsString, int& arrIndex, int intArray[10], bool& NonStringInput)
+{
+    try
+    {
+        intArray[arrIndex] = stoi(numAsString);
+        numAsString = "";
+        arrIndex++; 
+    }
+    catch (const std::exception&)
+    {
+        NonStringInput = true;
+    }
 }

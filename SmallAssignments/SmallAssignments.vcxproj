@@ -162,6 +162,7 @@
     <ClCompile Include="Palindrome.cpp" />
     <ClCompile Include="PrintLastNumber.cpp" />
     <ClCompile Include="SmallAssignments.cpp" />
+    <ClCompile Include="StuffFromLectures.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbsDiff.h" />
@@ -172,6 +173,7 @@
     <ClInclude Include="Palindrome.h" />
     <ClInclude Include="PrintLastNumber.h" />
     <ClInclude Include="SmallAssignments.h" />
+    <ClInclude Include="StuffFromLectures.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
